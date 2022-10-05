@@ -1,59 +1,48 @@
-import java.text.Format;
-
 public class Main {
     public static void main(String[] args) {
-                    //Usando un if, crear una condición que compare si la variable numeroIf es positivo, negativo, o 0.
-            int numeroIf = 0;
-                if (numeroIf < 0) {
-                    System.out.println("Negativo");
-                }
-                else if (numeroIf > 0) {
-                    System.out.println("positivo");
-                }
-                else {
-                    System.out.println("0");
-                }
 
-                     //Crea un bucle While, este bucle tendrá que tener como condición que la variable numeroWhile sea inferior a 3...
-                int numeroWhile = 0;
+        Persona persona = new Persona();
 
-                    while (numeroWhile < 3) {
-                        System.out.println(numeroWhile);
-                        numeroWhile = numeroWhile + 1;
-                    }
+        persona.setEdad(24);
+        persona.setNombre("Armando");
+        persona.setNumero_telefono(5688245678L);
 
-                    //bucle Do While
-                     do {
-                         System.out.println(numeroWhile);
-                         numeroWhile = numeroWhile + 1;
-                    } while (numeroWhile < 3);
-
-                    // bucle For
-             for (int numeroFor = 0; numeroFor <= 3; numeroFor = numeroFor + 1) {
-                 System.out.println(numeroFor);
-             }
-
-                    // Switch Case
-
-            String estacion = "otoño";
-
-             switch (estacion) {
-                 case "verano":
-                     System.out.println("Es Verano");
-                     break;
-                 case "primavera":
-                     System.out.println("Es Primavera");
-                     break;
-                 case "otoño":
-                     System.out.println("Es Otoño");
-                     break;
-                 case "invierno":
-                     System.out.println("Es Invierno");
-                     break;
-                 default:
-                     System.out.println("no es una estacion");
-
-             }
-
+        System.out.println(persona.getNombre());
+        System.out.println(persona.getEdad());
+        System.out.println(persona.getNumero_telefono());
     }
+}
+
+class Persona {
+    private int edad;
+    private String nombre;
+    private long numero_telefono;
+
+                //EDAD
+        public void setEdad(int edad) {
+            this.edad = edad;
+        }
+
+        public int getEdad() {
+            return this.edad;
+    }
+
+                //NOMBRE
+        public void setNombre (String nombre) {
+            this.nombre = nombre;
+    }
+        public String getNombre() {
+            return this.nombre;
+        }
+
+                //NUMERO DE TELEFONO
+        public void setNumero_telefono(long numero) {
+            this.numero_telefono = numero;
+    }
+        public long getNumero_telefono(){
+            return this.numero_telefono;
+        }
+
+
+
 }
